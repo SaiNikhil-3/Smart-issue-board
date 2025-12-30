@@ -1,0 +1,339 @@
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #f4f5f7;
+}
+
+.top-bar {
+  background: #1f2937;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info button {
+  margin-left: 10px;
+}
+
+.auth-container {
+  width: 300px;
+  margin: 120px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.board {
+  padding: 20px;
+}
+
+.create-box {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.kanban {
+  display: flex;
+  gap: 15px;
+}
+
+.kanban-column {
+  flex: 1;
+  background: #ebecf0;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 300px;
+}
+
+.issue-card {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: grab;
+}
+
+.issue-card:active {
+  cursor: grabbing;
+  opacity: 0.7;
+}
+
+.issue-card.High {
+  border-left: 5px solid #e11d48;
+}
+.issue-card.Medium {
+  border-left: 5px solid #f59e0b;
+}
+.issue-card.Low {
+  border-left: 5px solid #10b981;
+}
+
+.tag {
+  font-size: 12px;
+}
+/* Task bar */
+.task-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-bar input,
+.task-bar select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Column count badge */
+.kanban-column h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  background: #2563eb;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+/* AUTH PAGE */
+.auth-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+}
+
+.auth-card {
+  width: 360px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 5px;
+  color: #1f2937;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.password-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #4338ca;
+}
+
+.secondary-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #4f46e5;
+  color: #4f46e5;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: #eef2ff;
+}
+/* ===== BOARD UI ===== */
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.kanban {
+  display: flex;
+  gap: 16px;
+  height: calc(100vh - 300px);
+}
+
+.kanban-column {
+  flex: 1;
+  background: #ebecf0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  padding: 10px 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  background: #e5e7eb;
+  border-radius: 10px 10px 0 0;
+}
+
+.column-body {
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.issue-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.issue-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.issue-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.issue-desc {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.issue-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: white;
+}
+
+.badge.High { background: #e11d48; }
+.badge.Medium { background: #f59e0b; }
+.badge.Low { background: #10b981; }
+/* ===== MODAL ===== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.modal {
+  background: white;
+  width: 420px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: pop 0.2s ease-out;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-header span {
+  cursor: pointer;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1);
+}
+
